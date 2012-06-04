@@ -1,5 +1,5 @@
 """
-Prints ArmedXpert SVN logs to stdout, given a range of revisions. Doesn't matter what branch 
+Prints SVN logs to stdout, given a range of revisions. Doesn't matter what branch 
 the revision(s) are on, the logs will be retrieved.
 
 ex. 

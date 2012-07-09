@@ -3,9 +3,8 @@ Prints SVN logs to stdout, given a range of revisions. Doesn't matter what branc
 the revision(s) are on, the logs will be retrieved.
 
 ex. 
-python get_ax_logs.py "/src/myWorkingDir/" "https://127.0.0.1/svn/myRepo/" 747 848 >> log747-848.txt
+python get_logs.py "/src/myWorkingDir/" "https://127.0.0.1/svn/myRepo/" 747 848 >> log747-848.txt
 """
-
 
 from svn import get_logs
 import sys
@@ -25,7 +24,7 @@ if __name__ == '__main__':
     else:
         raise Exception("Not enough args")
 	
-    print("Getting logs for %s for revision(s) %s", repo, r)
+    print("Getting logs for %s for revision(s) %s" % (repo, r))
         
     logs = get_logs(r,working_dir,repo)
     print logs.logs_string().encode('utf8')
